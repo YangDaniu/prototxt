@@ -149,7 +149,7 @@ function valDealer(res, val, indent, key) {
     }
       
   } else {
-    res += spaces(indent + 2) + key + ": " + add_quote(val) + "\n"
+    res += spaces(indent + 2) + key + ": " + addQuote(val) + "\n"
   }
   return res
 }
@@ -172,7 +172,7 @@ const obj2prototxt = function (obj, indent) {
   return res
 }
 
-const add_quote = function (z) {
+const addQuote = function (z) {
   if(typeof z === 'number' || typeof z === 'boolean'){
     return z
   } else if(typeof z === 'string'){
